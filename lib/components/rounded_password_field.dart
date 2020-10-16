@@ -6,13 +6,13 @@ class RoundedPasswordField extends StatelessWidget {
   final Function(String) validator;
   final String hinText;
   final IconData icon;
-  final IconData suffxIcon;
+  // final IconData suffxIcon;
   const RoundedPasswordField({
     Key key,
     this.onChanged,
     this.hinText,
     this.icon,
-    this.suffxIcon,
+    // this.suffxIcon,
     this.validator,
   }) : super(key: key);
 
@@ -29,10 +29,10 @@ class RoundedPasswordField extends StatelessWidget {
             icon,
             color: kSecondaryColor,
           ),
-          suffixIcon: Icon(
-            suffxIcon,
-            color: kSecondaryColor,
-          ),
+          // suffixIcon: Icon(
+          //   suffxIcon,
+          //   color: kSecondaryColor,
+          // ),
           border: InputBorder.none,
         ),
       ),

@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "851325734249",
-    "firebase_url": "https://moneytor-5e147.firebaseio.com",
-    "project_id": "moneytor-5e147",
-    "storage_bucket": "moneytor-5e147.appspot.com"
+    "project_number": "764464797213",
+    "firebase_url": "https://moneytoring-e8b60.firebaseio.com",
+    "project_id": "moneytoring-e8b60",
+    "storage_bucket": "moneytoring-e8b60.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:851325734249:android:62115baf2ab1a0bc0181f8",
+        "mobilesdk_app_id": "1:764464797213:android:0c80e97a4455101a9b98f4",
         "android_client_info": {
-          "package_name": "com.etechng.moneytor"
+          "package_name": "com.example.moneytor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "851325734249-ila89uenl7k1b08c8ouiibkvj12guuat.apps.googleusercontent.com",
+          "client_id": "764464797213-g1frsium82jmdsoid2u6tuevhee91hbu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDPGKBDxvjO3Myjow7gijy63s2dZgU5wqw"
+          "current_key": "AIzaSyCk9ACoXPp0p_Ln3_cIyttVI_L_bVqqt18"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "851325734249-ila89uenl7k1b08c8ouiibkvj12guuat.apps.googleusercontent.com",
+              "client_id": "764464797213-g1frsium82jmdsoid2u6tuevhee91hbu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

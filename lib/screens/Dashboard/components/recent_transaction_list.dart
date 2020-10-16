@@ -7,7 +7,7 @@ class RecentTransactionList extends StatelessWidget {
   final int amount;
   final IconData icon;
   RecentTransactionList(
-      {Key key, this.title, this.subtitle, this.amount, this.icon})
+      {Key key, this.title, this.subtitle, this.amount = 85500, this.icon})
       : super(key: key);
 
   @override
@@ -91,8 +91,7 @@ class RecentTransactionList extends StatelessWidget {
                           color: kCompletedColor),
                     ),
                     Text(
-                      '15,520 ',
-                      // '+' + '₦' + "${numberFormat.format(amount)}",
+                      "${numberFormat.format(amount)}",
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,

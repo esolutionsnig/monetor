@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
-class TextFieldContainer extends StatelessWidget {
+class PlanTextFieldContainer2 extends StatelessWidget {
   final Widget child;
-  const TextFieldContainer({
+  final double width;
+  const PlanTextFieldContainer2({
     Key key,
     this.child,
+    this.width,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-      width: size.width * 0.8,
+      margin: EdgeInsets.symmetric(vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      width: width,
       decoration: BoxDecoration(
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(30),

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:moneytor/components/components.dart';
 import 'package:moneytor/services/auth.dart';
 
-class WallerHeader extends StatelessWidget {
+class Header extends StatelessWidget {
   final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      // margin: EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

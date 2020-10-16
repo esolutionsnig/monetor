@@ -18,13 +18,14 @@ class RoundedButton extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: FlatButton(
-          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+          padding: EdgeInsets.symmetric(vertical: 17, horizontal: 30),
           color: color,
           onPressed: press,
           child: Text(
             text.toUpperCase(),
             style: TextStyle(
               color: textColor,
+              fontSize: 18,
             ),
           ),
         ),

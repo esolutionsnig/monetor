@@ -22,8 +22,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Moneytor',
         theme: ThemeData(
+          primarySwatch: Colors.pink,
+          canvasColor: Colors.transparent,
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: kScaffoldBackgroundColor,
+          textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
           dividerTheme: DividerThemeData(
             space: 6,
             thickness: 2,

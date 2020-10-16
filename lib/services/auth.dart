@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:moneytor/models/user_model.dart';
+import 'package:moneytor/services/database.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -28,11 +29,16 @@ class AuthService {
   }
 
   // Register With Email And Password
-  Future registerWithEmailAndPassword(String email, String password) async {
+  Future registerWithEmailAndPassword(
+      String name, String gender, String email, String password) async {
     try {
       User user = (await _auth.createUserWithEmailAndPassword(
               email: email, password: password))
           .user;
+
+      // Create new document for the registered user with the uid
+      await DatabaseService(uid: user.uid).updateUserData(name, gender);
+
       return _userFromFirebaseUser(user);
     } catch (e) {
       print(e.toString());
