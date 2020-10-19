@@ -6,6 +6,7 @@ const kErrorColor = Color(0xFFAF0000);
 // const kSecondaryLightColor = Color(0xFFFCE4EC);
 const kSecondaryLightColor = Color(0xFFfaf0f3);
 const kTextColor = Color(0xFF636363);
+const kGreyColor = Color(0xFFCCCCCC);
 const kCompletedColor = Color(0xFF009688);
 const kHalfwayColor = Color(0xFFE65100);
 const kStartedColor = Color(0xFFAF0000);
@@ -88,7 +89,7 @@ List recentTransactions = [
   }
 ];
 
-List pieColors = [kSecondaryColor, kCompletedColor];
+List pieColors = [kScaffoldBackgroundColor2, kCompletedColor];
 
 const pinkGradient = LinearGradient(
   colors: <Color>[kDarkPink4, kDarkPink2, kDarkPink1],

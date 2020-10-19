@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moneytor/components/components.dart';
 
 class ChartLabel extends StatelessWidget {
   final IconData icon;
@@ -19,9 +20,16 @@ class ChartLabel extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            icon,
-            color: iconColor,
+          Container(
+            decoration: BoxDecoration(
+              boxShadow: customShadowSmall,
+              color: iconColor,
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              icon,
+              color: iconColor,
+            ),
           ),
           SizedBox(width: 6),
           Text(

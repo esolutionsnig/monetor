@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         title: 'Moneytor',
         theme: ThemeData(
           primarySwatch: Colors.pink,
-          canvasColor: Colors.transparent,
+          // canvasColor: Colors.transparent,
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: kScaffoldBackgroundColor,
           textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),

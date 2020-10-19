@@ -31,12 +31,13 @@ class _NewTransactionScreenState extends State<NewTransactionScreen> {
   String title = '';
   String subTitle = '';
   String paymentType = 'Daily';
-  int paymentDuration = 1;
-  int targetAmount = 1;
-  int raisedAmount = 1;
-  int proposedRepaymentAmount = 1;
+  int paymentDuration = 0;
+  int targetAmount = 0;
+  int raisedAmount = 0;
+  int proposedRepaymentAmount = 0;
   String status = 'Running';
   DateTime paymentDate = DateTime.now();
+  DateTime startDateTime = DateTime.now();
   int progress = 0;
 
   int _currentIndex = 1;
@@ -330,6 +331,7 @@ class _NewTransactionScreenState extends State<NewTransactionScreen> {
                                       proposedRepaymentAmount,
                                       status,
                                       paymentDate,
+                                      startDateTime,
                                       progress);
                                   Navigator.of(context).pop();
                                 }

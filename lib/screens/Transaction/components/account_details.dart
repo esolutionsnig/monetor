@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:moneytor/components/constants.dart';
+import 'package:moneytor/models/models.dart';
 
 class AccountDetails extends StatelessWidget {
+  final PlanModel plan;
+  AccountDetails({this.plan});
+
   final NumberFormat numberFormat = NumberFormat('##,###', 'en_US');
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,7 @@ class AccountDetails extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "${item['name']} Amount:",
+                            "${plan.targetAmount} Amount:",
                             style: TextStyle(
                               fontSize: 13,
                             ),

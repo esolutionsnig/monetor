@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:moneytor/Screens/Transaction/components/account_details.dart';
+import 'package:intl/intl.dart';
 import 'package:moneytor/components/constants.dart';
+import 'package:moneytor/models/models.dart';
+import 'package:moneytor/screens/Transaction/components/transaction_plan_data.dart';
 
 class TransactionCard extends StatelessWidget {
+  final PlanModel plan;
+  final Color backgroundColor;
+  TransactionCard({this.plan, this.backgroundColor});
+
+  final NumberFormat numberFormat = NumberFormat('##,###', 'en_US');
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: MediaQuery.of(context).size.width * 0.9,
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 35),
+      width: MediaQuery.of(context).size.width * 0.90,
+      margin: EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
-        color: kScaffoldBackgroundColor,
-        boxShadow: customShadow,
+        color: backgroundColor,
+        boxShadow: customShadowSmall,
         borderRadius: BorderRadius.circular(22),
       ),
       child: Stack(
@@ -24,7 +31,7 @@ class TransactionCard extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: customShadow,
                 shape: BoxShape.circle,
-                color: kScaffoldBackgroundColor.withAlpha(225),
+                color: backgroundColor.withAlpha(225),
               ),
             ),
           ),
@@ -36,7 +43,7 @@ class TransactionCard extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: customShadow,
                 shape: BoxShape.circle,
-                color: kScaffoldBackgroundColor.withAlpha(225),
+                color: backgroundColor.withAlpha(225),
               ),
             ),
           ),
@@ -48,7 +55,7 @@ class TransactionCard extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: customShadow,
                 shape: BoxShape.circle,
-                color: kScaffoldBackgroundColor.withAlpha(225),
+                color: backgroundColor.withAlpha(225),
               ),
             ),
           ),
@@ -60,7 +67,7 @@ class TransactionCard extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: customShadow,
                 shape: BoxShape.circle,
-                color: kScaffoldBackgroundColor.withAlpha(225),
+                color: backgroundColor.withAlpha(225),
               ),
             ),
           ),
@@ -72,7 +79,7 @@ class TransactionCard extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: customShadow,
                 shape: BoxShape.circle,
-                color: kScaffoldBackgroundColor.withAlpha(225),
+                color: backgroundColor.withAlpha(225),
               ),
             ),
           ),
@@ -84,13 +91,18 @@ class TransactionCard extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: customShadow,
                 shape: BoxShape.circle,
-                color: kScaffoldBackgroundColor.withAlpha(225),
+                color: backgroundColor.withAlpha(225),
               ),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: 15, top: 15),
-            child: AccountDetails(),
+            child: TransactionPlanData(
+              plan: plan,
+              color: kPrimaryColor,
+              backgroundColor:
+                  plan.status == 'Running' ? kHalfwayColor : kCompletedColor,
+            ),
           ),
         ],
       ),

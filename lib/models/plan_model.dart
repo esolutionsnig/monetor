@@ -1,4 +1,5 @@
 class PlanModel {
+  final String id;
   final String userId;
   final String title;
   final String subTitle;
@@ -9,9 +10,11 @@ class PlanModel {
   final int proposedRepaymentAmount;
   final String status;
   final DateTime paymentDate;
+  final DateTime startDateTime;
   final int progress;
 
   PlanModel({
+    this.id,
     this.userId,
     this.title,
     this.subTitle,
@@ -22,6 +25,7 @@ class PlanModel {
     this.proposedRepaymentAmount,
     this.status,
     this.paymentDate,
+    this.startDateTime,
     this.progress,
   });
 }
