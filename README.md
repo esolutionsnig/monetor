@@ -1,10 +1,10 @@
 # moneytor
 
-A new Flutter project.
+This app enables its users to save towards a goal. It is not a payment app, but serves as a recoord keeping app.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is developed using flutter and firebase
 
 A few resources to get you started if this is your first Flutter project:
 
